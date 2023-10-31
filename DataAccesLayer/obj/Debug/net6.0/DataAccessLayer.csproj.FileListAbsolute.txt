@@ -1,0 +1,24 @@
+C:\Users\HP\source\repos\DataAccesLayer\bin\Debug\net6.0\DataAccessLayer.deps.json
+C:\Users\HP\source\repos\DataAccesLayer\bin\Debug\net6.0\DataAccessLayer.dll
+C:\Users\HP\source\repos\DataAccesLayer\bin\Debug\net6.0\DataAccessLayer.pdb
+C:\Users\HP\source\repos\DataAccesLayer\obj\Debug\net6.0\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\HP\source\repos\DataAccesLayer\obj\Debug\net6.0\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\source\repos\DataAccesLayer\obj\Debug\net6.0\DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\HP\source\repos\DataAccesLayer\obj\Debug\net6.0\DataAccessLayer.AssemblyInfo.cs
+C:\Users\HP\source\repos\DataAccesLayer\obj\Debug\net6.0\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\DataAccesLayer\obj\Debug\net6.0\DataAccessLayer.dll
+C:\Users\HP\source\repos\DataAccesLayer\obj\Debug\net6.0\refint\DataAccessLayer.dll
+C:\Users\HP\source\repos\DataAccesLayer\obj\Debug\net6.0\DataAccessLayer.pdb
+C:\Users\HP\source\repos\DataAccesLayer\obj\Debug\net6.0\ref\DataAccessLayer.dll
+D:\Three tier api\DataAccesLayer\bin\Debug\net6.0\DataAccessLayer.deps.json
+D:\Three tier api\DataAccesLayer\bin\Debug\net6.0\DataAccessLayer.dll
+D:\Three tier api\DataAccesLayer\bin\Debug\net6.0\DataAccessLayer.pdb
+D:\Three tier api\DataAccesLayer\obj\Debug\net6.0\DataAccessLayer.csproj.AssemblyReference.cache
+D:\Three tier api\DataAccesLayer\obj\Debug\net6.0\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\Three tier api\DataAccesLayer\obj\Debug\net6.0\DataAccessLayer.AssemblyInfoInputs.cache
+D:\Three tier api\DataAccesLayer\obj\Debug\net6.0\DataAccessLayer.AssemblyInfo.cs
+D:\Three tier api\DataAccesLayer\obj\Debug\net6.0\DataAccessLayer.csproj.CoreCompileInputs.cache
+D:\Three tier api\DataAccesLayer\obj\Debug\net6.0\DataAccessLayer.dll
+D:\Three tier api\DataAccesLayer\obj\Debug\net6.0\refint\DataAccessLayer.dll
+D:\Three tier api\DataAccesLayer\obj\Debug\net6.0\DataAccessLayer.pdb
+D:\Three tier api\DataAccesLayer\obj\Debug\net6.0\ref\DataAccessLayer.dll

@@ -1,0 +1,34 @@
+C:\Users\HP\source\repos\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.deps.json
+C:\Users\HP\source\repos\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.dll
+C:\Users\HP\source\repos\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.pdb
+C:\Users\HP\source\repos\BusinessLogicLayer\bin\Debug\net6.0\DataAccessLayer.dll
+C:\Users\HP\source\repos\BusinessLogicLayer\bin\Debug\net6.0\DataAccessLayer.pdb
+C:\Users\HP\source\repos\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.csproj.AssemblyReference.cache
+C:\Users\HP\source\repos\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\source\repos\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.AssemblyInfoInputs.cache
+C:\Users\HP\source\repos\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.AssemblyInfo.cs
+C:\Users\HP\source\repos\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.csproj.CopyComplete
+C:\Users\HP\source\repos\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.dll
+C:\Users\HP\source\repos\BusinessLogicLayer\obj\Debug\net6.0\refint\BusinessLogicLayer.dll
+C:\Users\HP\source\repos\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.pdb
+C:\Users\HP\source\repos\BusinessLogicLayer\obj\Debug\net6.0\ref\BusinessLogicLayer.dll
+C:\Users\HP\source\repos\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.runtimeconfig.json
+C:\Users\HP\source\repos\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.genruntimeconfig.cache
+D:\Three tier api\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.deps.json
+D:\Three tier api\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.runtimeconfig.json
+D:\Three tier api\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.dll
+D:\Three tier api\BusinessLogicLayer\bin\Debug\net6.0\BusinessLogicLayer.pdb
+D:\Three tier api\BusinessLogicLayer\bin\Debug\net6.0\DataAccessLayer.dll
+D:\Three tier api\BusinessLogicLayer\bin\Debug\net6.0\DataAccessLayer.pdb
+D:\Three tier api\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.csproj.AssemblyReference.cache
+D:\Three tier api\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\Three tier api\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.AssemblyInfoInputs.cache
+D:\Three tier api\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.AssemblyInfo.cs
+D:\Three tier api\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.csproj.CoreCompileInputs.cache
+D:\Three tier api\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.csproj.CopyComplete
+D:\Three tier api\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.dll
+D:\Three tier api\BusinessLogicLayer\obj\Debug\net6.0\refint\BusinessLogicLayer.dll
+D:\Three tier api\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.pdb
+D:\Three tier api\BusinessLogicLayer\obj\Debug\net6.0\BusinessLogicLayer.genruntimeconfig.cache
+D:\Three tier api\BusinessLogicLayer\obj\Debug\net6.0\ref\BusinessLogicLayer.dll

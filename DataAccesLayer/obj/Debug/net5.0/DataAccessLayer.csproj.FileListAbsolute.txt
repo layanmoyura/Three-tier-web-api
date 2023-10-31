@@ -1,0 +1,5 @@
+C:\Users\HP\source\repos\DataAccesLayer\obj\Debug\net5.0\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\HP\source\repos\DataAccesLayer\obj\Debug\net5.0\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\source\repos\DataAccesLayer\obj\Debug\net5.0\DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\HP\source\repos\DataAccesLayer\obj\Debug\net5.0\DataAccessLayer.AssemblyInfo.cs
+C:\Users\HP\source\repos\DataAccesLayer\obj\Debug\net5.0\DataAccessLayer.csproj.CoreCompileInputs.cache
