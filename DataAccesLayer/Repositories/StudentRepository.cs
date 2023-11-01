@@ -25,7 +25,7 @@ namespace DataAccessLayer.Repositaries
 
         public async Task<Student> GetDetStudentByIdAsync(int id)
         {
-            // Use the await keyword to retrieve the student details asynchronously
+            
             var studentDetails = await context.Student
                 .Where(s => s.ID == id)
                 .Select(s => new

@@ -30,7 +30,7 @@ namespace DataAccessLayer.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task UpdateEnrollment(Enrollment enrollment, int id)
+        public async Task UpdateEnrollment(Enrollment enrollment_new, int id)
         {
             try
             {
@@ -40,7 +40,7 @@ namespace DataAccessLayer.Repositories
                     throw new Exception("Enrollment not found");
                 }
 
-                UpdateEnrollmentProperties(enrollment_old, enrollment);
+                UpdateEnrollmentProperties(enrollment_old, enrollment_new);
 
                 await _context.SaveChangesAsync();
             }
@@ -50,21 +50,21 @@ namespace DataAccessLayer.Repositories
             }
         }
 
-        private void UpdateEnrollmentProperties(Enrollment enrollment_old, Enrollment enrollment)
+        private void UpdateEnrollmentProperties(Enrollment enrollment_old, Enrollment enrollment_new)
         {
-            if (enrollment.CourseID != null && enrollment_old.CourseID != enrollment.CourseID)
+            if (enrollment_new.CourseID != null && enrollment_old.CourseID != enrollment_new.CourseID)
             {
-                enrollment_old.CourseID = enrollment.CourseID;
+                enrollment_old.CourseID = enrollment_new.CourseID;
             }
 
-            if (enrollment.StudentID != null && enrollment_old.StudentID != enrollment.StudentID)
+            if (enrollment_new.StudentID != null && enrollment_old.StudentID != enrollment_new.StudentID)
             {
-                enrollment_old.StudentID = enrollment.StudentID;
+                enrollment_old.StudentID = enrollment_new.StudentID;
             }
 
-            if (enrollment.Grade != null && enrollment_old.Grade != enrollment.Grade)
+            if (enrollment_new.Grade != null && enrollment_old.Grade != enrollment_new.Grade)
             {
-                enrollment_old.Grade = enrollment.Grade;
+                enrollment_old.Grade = enrollment_new.Grade;
             }
         }
 
