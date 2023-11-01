@@ -278,8 +278,6 @@ D:\Three tier api\PresentationLayer\Soft-Gallery-Project-repo\obj\Debug\net6.0\P
 D:\Three tier api\PresentationLayer\Soft-Gallery-Project-repo\obj\Debug\net6.0\PresentationLayer.AssemblyInfo.cs
 D:\Three tier api\PresentationLayer\Soft-Gallery-Project-repo\obj\Debug\net6.0\PresentationLayer.csproj.CoreCompileInputs.cache
 D:\Three tier api\PresentationLayer\Soft-Gallery-Project-repo\obj\Debug\net6.0\PresentationLayer.MvcApplicationPartsAssemblyInfo.cache
-D:\Three tier api\PresentationLayer\Soft-Gallery-Project-repo\obj\Debug\net6.0\PresentationLayer.RazorAssemblyInfo.cache
-D:\Three tier api\PresentationLayer\Soft-Gallery-Project-repo\obj\Debug\net6.0\PresentationLayer.RazorAssemblyInfo.cs
 D:\Three tier api\PresentationLayer\Soft-Gallery-Project-repo\obj\Debug\net6.0\staticwebassets\msbuild.PresentationLayer.Microsoft.AspNetCore.StaticWebAssets.props
 D:\Three tier api\PresentationLayer\Soft-Gallery-Project-repo\obj\Debug\net6.0\staticwebassets\msbuild.build.PresentationLayer.props
 D:\Three tier api\PresentationLayer\Soft-Gallery-Project-repo\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.PresentationLayer.props
