@@ -30,10 +30,10 @@ namespace BusinessLayer.Services
                     students = students.OrderByDescending(s => s.LastName).ToList();
                     break;
                 case "Date":
-                    students = students.OrderBy(s => s.EnrollmentDate).ToList();
+                    students = students.OrderBy(s => s.JoinedDate).ToList();
                     break;
                 case "date_desc":
-                    students = students.OrderByDescending(s => s.EnrollmentDate).ToList();
+                    students = students.OrderByDescending(s => s.JoinedDate).ToList();
                     break;
                 default:
                     students = students.OrderBy(s => s.LastName).ToList();

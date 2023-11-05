@@ -19,7 +19,23 @@ public class CourseRepositary : ICourseRepositary
 
     public async Task<Course> GetCourseByIdAsync(int id)
     {
-        return await _context.Course.FirstOrDefaultAsync(c => c.CourseID == id);
+        var courseDetails = await _context.Course
+      .Where(c => c.CourseID == id)
+      .Select(c => new Course
+      {
+          CourseID = c.CourseID,
+          Title = c.Title,
+          Credits = c.Credits,
+          Enrollments = c.Enrollments.Select(e => new Enrollment
+          {
+              EnrollmentID = e.EnrollmentID,
+              StudentID = e.StudentID,
+              Grade = e.Grade
+          }).ToList()
+      })
+      .FirstOrDefaultAsync();
+
+        return courseDetails;
     }
 
     public async Task AddCourseAsync(Course course)

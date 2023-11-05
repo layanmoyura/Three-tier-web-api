@@ -7,6 +7,7 @@ using BusinessLayer.Interfaces;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using DataAccessLayer.Entity;
+using Microsoft.EntityFrameworkCore;
 
 namespace ContosoUniversity.Controllers
 {
@@ -61,7 +62,7 @@ namespace ContosoUniversity.Controllers
 
         [Route("create")]
         [HttpPost]
-        public async Task<ActionResult> Create([Bind("LastName,FirstMidName,EnrollmentDate")] StudentModel studentmodel)
+        public async Task<ActionResult> Create([Bind("LastName,FirstMidName,JoinedDate")] StudentModel studentmodel)
         {
        
             var student = MappingFunctions.ToStudent(studentmodel);
@@ -73,7 +74,7 @@ namespace ContosoUniversity.Controllers
 
         [Route("update/{id}")]
         [HttpPut]
-        public async Task<ActionResult> EditPost([Bind("LastName,FirstMidName,EnrollmentDate")] StudentModel studentmodel, int id)
+        public async Task<ActionResult> EditPost([Bind("LastName,FirstMidName,JoinedDate")] StudentModel studentmodel, int id)
         {
             var updatestudent = MappingFunctions.ToStudent(studentmodel);
             await studentServices.UpdateStudentAsync(updatestudent, id);
@@ -85,9 +86,22 @@ namespace ContosoUniversity.Controllers
         [Route("delete/{id}")]
         [HttpDelete]
         public async Task<IActionResult> DeleteConfirm(int? id)
+
+
         {
-            await studentServices.DeleteStudentAsync(id.Value);
-            return RedirectToAction(nameof(Index));
+            try
+            {
+                await studentServices.DeleteStudentAsync(id.Value);
+                return RedirectToAction(nameof(Index));
+            }
+
+            catch (DbUpdateException)
+            {
+                {
+                    return BadRequest("Delete the existing Enrollments");
+                }
+
+            }
         }
 
     }

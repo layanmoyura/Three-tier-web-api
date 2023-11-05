@@ -21,7 +21,29 @@ namespace DataAccessLayer.Repositories
 
         public async Task<Enrollment> GetEnrollmentById(int id)
         {
-            return await _context.Enrollment.FirstOrDefaultAsync(m => m.EnrollmentID == id);
+            var enrollmentDetails = await _context.Enrollment
+        .Where(e => e.EnrollmentID == id)
+        .Select(e => new Enrollment
+        {
+            EnrollmentID = e.EnrollmentID,
+            CourseID = e.CourseID,
+            StudentID = e.StudentID,
+            Grade = e.Grade,
+            Student = new Student
+            {
+                LastName = e.Student.LastName,
+                FirstMidName = e.Student.FirstMidName,
+                JoinedDate = e.Student.JoinedDate,
+            },
+            Course = new Course
+            {
+                Title = e.Course.Title,
+                Credits = e.Course.Credits
+            }
+        })
+        .FirstOrDefaultAsync();
+
+            return enrollmentDetails;
         }
 
         public async Task AddEnrollment(Enrollment enrollment)

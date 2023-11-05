@@ -15,7 +15,7 @@ namespace DataAccessLayer.Entity
         public Grade? Grade { get; set; }
 
         public Course Course { get; set; }
-        [JsonIgnore]
+       
         public Student Student { get; set; }
     }
 }

@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using PresentationLayer.Models;
 using PresentationLayer.helper;
 using BusinessLayer.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 namespace ContosoUniversity.Controllers
 {
@@ -79,9 +80,18 @@ namespace ContosoUniversity.Controllers
         [HttpDelete]
         public async Task<ActionResult> DeleteConfirm(int? id)
         {
-            var course = await _courseServices.GetCourseByIdAsync(id.Value);
-            await _courseServices.DeleteCourseAsync(course);
-            return RedirectToAction(nameof(Index));
+            try
+            {
+                var course = await _courseServices.GetCourseByIdAsync(id.Value);
+                await _courseServices.DeleteCourseAsync(course);
+                return RedirectToAction(nameof(Index));
+            }
+
+            catch(DbUpdateException)
+            {
+                return BadRequest("Delete the existing Enrollments");
+            }
+            
         }
     }
 }

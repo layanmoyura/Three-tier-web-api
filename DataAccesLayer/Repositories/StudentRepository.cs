@@ -3,8 +3,6 @@ using DataAccessLayer.Data;
 using DataAccessLayer.Entity;
 using Microsoft.EntityFrameworkCore;
 using DataAccessLayer.Interfaces;
-using System.Text.Json.Serialization;
-using System.Text.Json;
 
 namespace DataAccessLayer.Repositaries
 {
@@ -33,7 +31,7 @@ namespace DataAccessLayer.Repositaries
                     s.ID,
                     s.LastName,
                     s.FirstMidName,
-                    s.EnrollmentDate,
+                    s.JoinedDate,
                     Enrollments = s.Enrollments
                         .Select(e => new
                         {
@@ -55,7 +53,7 @@ namespace DataAccessLayer.Repositaries
                     ID = studentDetails.ID,
                     LastName = studentDetails.LastName,
                     FirstMidName = studentDetails.FirstMidName,
-                    EnrollmentDate = studentDetails.EnrollmentDate,
+                    JoinedDate = studentDetails.JoinedDate,
                     Enrollments = studentDetails.Enrollments
                         .Select(e => new Enrollment
                         {
@@ -121,9 +119,9 @@ namespace DataAccessLayer.Repositaries
                 student_old.FirstMidName = student_new.FirstMidName;
             }
 
-            if (student_new.EnrollmentDate != null && student_old.EnrollmentDate != student_new.EnrollmentDate)
+            if (student_new.JoinedDate != null && student_old.JoinedDate != student_new.JoinedDate)
             {
-                student_old.EnrollmentDate = student_new.EnrollmentDate;
+                student_old.JoinedDate = student_new.JoinedDate;
             }
         }
 
