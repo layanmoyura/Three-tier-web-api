@@ -12,6 +12,7 @@ namespace DataAccessLayer.Data
         public DbSet<Course> Course { get; set; }
         public DbSet<Enrollment> Enrollment { get; set; }
         public DbSet<Student> Student { get; set; }
+        public DbSet<Admin> Admin { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
