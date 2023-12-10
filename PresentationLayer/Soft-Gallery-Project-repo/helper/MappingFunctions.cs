@@ -86,6 +86,11 @@ namespace PresentationLayer.helper
             return updateenrollment;
         }
 
+        public static Admin ToAdmin(this AdminModel adminModel)
+        {
+            return _mapper.Map<Admin>(adminModel);
+        }
+
 
     }
 }

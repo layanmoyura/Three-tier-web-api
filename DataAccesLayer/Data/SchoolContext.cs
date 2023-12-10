@@ -18,6 +18,7 @@ namespace DataAccessLayer.Data
             modelBuilder.Entity<Course>().ToTable("Course");
             modelBuilder.Entity<Enrollment>().ToTable("Enrollment");
             modelBuilder.Entity<Student>().ToTable("Student");
+            modelBuilder.Entity<Admin>().ToTable("Admin");
 
             modelBuilder.Entity<Enrollment>()
                 .HasOne(e => e.Course)
@@ -30,6 +31,10 @@ namespace DataAccessLayer.Data
                 .WithMany(s => s.Enrollments)
                 .HasForeignKey(e => e.StudentID)
                 .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<Admin>()
+               .HasIndex(a => a.EmailAddress)
+               .IsUnique();
         }
 
 

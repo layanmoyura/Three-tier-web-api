@@ -292,3 +292,6 @@ D:\Three tier api\PresentationLayer\Soft-Gallery-Project-repo\obj\Debug\net6.0\r
 D:\Three tier api\PresentationLayer\Soft-Gallery-Project-repo\obj\Debug\net6.0\PresentationLayer.pdb
 D:\Three tier api\PresentationLayer\Soft-Gallery-Project-repo\obj\Debug\net6.0\PresentationLayer.genruntimeconfig.cache
 D:\Three tier api\PresentationLayer\Soft-Gallery-Project-repo\obj\Debug\net6.0\ref\PresentationLayer.dll
+D:\Three tier api\PresentationLayer\Soft-Gallery-Project-repo\bin\Debug\net6.0\BCrypt.Net-Next.dll
+D:\Three tier api\PresentationLayer\Soft-Gallery-Project-repo\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Three tier api\PresentationLayer\Soft-Gallery-Project-repo\bin\Debug\net6.0\BouncyCastle.Crypto.dll

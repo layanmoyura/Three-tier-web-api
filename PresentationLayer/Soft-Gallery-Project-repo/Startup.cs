@@ -12,6 +12,9 @@ using DataAccessLayer.Repositaries;
 using BusinessLayer.Interfaces;
 using BusinessLayer.Services;
 using DataAccessLayer.Repositories;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace Soft_Gallery_Project
 {
@@ -37,26 +40,17 @@ namespace Soft_Gallery_Project
             services.AddScoped<IStudentRepository, StudentRepository>();
             services.AddScoped<ICourseRepositary, CourseRepositary>();
             services.AddScoped<IEnrollmentRepositary, EnrollmentRepositary>();
+            services.AddScoped<IAdminRepositary, AdminRepositary>();
 
 
             services.AddScoped<IStudentServices, StudentServices>();
             services.AddScoped<IEnrollmentService, EnrollmentService>();
             services.AddScoped<ICourseServices, CourseService>();
+            services.AddScoped<IAdminServices, AdminServices>();
 
+            services.AddCors(options => options.AddDefaultPolicy(
 
-
-
-            services.AddCors(options =>
-            {
-                options.AddPolicy("AllowAllHeaders",
-                    builder =>
-                    {
-                        builder
-                            .AllowAnyOrigin()  // Allow requests from any origin
-                            .AllowAnyMethod()  // Allow any HTTP method (GET, POST, PUT, DELETE, etc.)
-                            .AllowAnyHeader(); // Allow any HTTP headers
-                    });
-            });
+                builder => builder.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowAnyHeader()));
 
             var mapperConfig = new MapperConfiguration(mc =>
             {
@@ -65,6 +59,24 @@ namespace Soft_Gallery_Project
 
             IMapper mapper = mapperConfig.CreateMapper();
             services.AddSingleton(mapper);
+
+            services.AddAuthentication(opt => {
+                opt.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                opt.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+            .AddJwtBearer(options =>
+            {
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+                    ValidIssuer = "https://localhost:44309",
+                    ValidAudience = "https://localhost:44309",
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("superSecretKey@345"))
+                };
+            });
 
         }
 
@@ -81,7 +93,9 @@ namespace Soft_Gallery_Project
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
             app.UseAuthentication();
+
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
