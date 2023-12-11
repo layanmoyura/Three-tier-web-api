@@ -8,6 +8,7 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using DataAccessLayer.Entity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ContosoUniversity.Controllers
 {
@@ -23,6 +24,7 @@ namespace ContosoUniversity.Controllers
         }
 
         //READ
+        [Authorize]
         [Route("index")]
         [HttpGet]
         
@@ -59,7 +61,7 @@ namespace ContosoUniversity.Controllers
 
 
 
-
+        [Authorize]
         [Route("create")]
         [HttpPost]
         public async Task<ActionResult> Create([Bind("LastName,FirstMidName,JoinedDate")] StudentModel studentmodel)
