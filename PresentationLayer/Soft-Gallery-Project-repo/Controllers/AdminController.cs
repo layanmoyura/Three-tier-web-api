@@ -78,7 +78,7 @@ namespace ContosoUniversity.Controllers
                             issuer: "https://localhost:44309",
                             audience: "https://localhost:44309",
                             claims: new List<Claim>() {
-                        new Claim("role","admin"),new Claim("name",admin.FirstName)},
+                        new Claim("role","admin"),new Claim("name",admin.FirstName),new Claim("Secret","$2a$10$6J8zY4cX9Lb5zK1ZvJz6XO")},
                             expires: DateTime.Now.AddMinutes(5),
                             signingCredentials: signinCredentials
                         );
