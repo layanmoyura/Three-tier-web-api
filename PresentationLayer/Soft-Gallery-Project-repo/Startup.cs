@@ -50,7 +50,7 @@ namespace Soft_Gallery_Project
 
             services.AddCors(options => options.AddDefaultPolicy(
 
-                builder => builder.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowAnyHeader()));
+                builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()));
 
             var mapperConfig = new MapperConfiguration(mc =>
             {

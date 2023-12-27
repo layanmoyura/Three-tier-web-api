@@ -53,11 +53,11 @@ namespace ContosoUniversity.Controllers
 
         [Route("create")]
         [HttpPost]
-        public async Task<ActionResult> Create([Bind("CourseID,Title,Credits")] CourseModel coursemodel)
+        public async Task<ActionResult> Create([Bind("Title,Credits")] CourseModel coursemodel)
         {     
                 var course = MappingFunctions.ToCourse(coursemodel);
                 await _courseServices.AddCourseAsync(course);
-                return RedirectToAction(nameof(Index));
+                return StatusCode(200);
 
         }
 
@@ -66,12 +66,12 @@ namespace ContosoUniversity.Controllers
 
         [Route("update/{id}")]
         [HttpPut]
-        public async Task<ActionResult> EditPost([Bind("CourseID,Title,Credits")] CourseModel courseModel, int id)
+        public async Task<ActionResult> EditPost([Bind("Title,Credits")] CourseModel courseModel, int id)
         {
            
             var updatecourse = MappingFunctions.ToCourse(courseModel);
             await _courseServices.UpdateCourseAsync(updatecourse,id);
-            return RedirectToAction(nameof(Index));
+            return StatusCode(200);
                 
             
         }
@@ -82,9 +82,9 @@ namespace ContosoUniversity.Controllers
         {
             try
             {
-                var course = await _courseServices.GetCourseByIdAsync(id.Value);
-                await _courseServices.DeleteCourseAsync(course);
-                return RedirectToAction(nameof(Index));
+              
+                await _courseServices.DeleteCourseAsync(id.Value);
+                return StatusCode(200);
             }
 
             catch(DbUpdateException)

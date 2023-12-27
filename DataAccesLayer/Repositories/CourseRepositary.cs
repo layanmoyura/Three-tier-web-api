@@ -14,7 +14,22 @@ public class CourseRepositary : ICourseRepositary
 
     public async Task<IEnumerable<Course>> GetCoursesAsync()
     {
-        return await _context.Course.ToListAsync();
+        var courseList = await _context.Course
+     .Select(c => new Course
+     {
+         CourseID = c.CourseID,
+         Title = c.Title,
+         Credits = c.Credits,
+         Enrollments = c.Enrollments.Select(e => new Enrollment
+         {
+             EnrollmentID = e.EnrollmentID,
+             StudentID = e.StudentID,
+             Grade = e.Grade
+         }).ToList()
+     })
+     .ToListAsync();
+
+        return courseList;
     }
 
     public async Task<Course> GetCourseByIdAsync(int id)
@@ -55,6 +70,7 @@ public class CourseRepositary : ICourseRepositary
             }
 
             UpdateCourseProperties(course_old, course_new);
+            _context.Entry(course_old).State = EntityState.Modified;
 
             await _context.SaveChangesAsync();
         }
@@ -78,8 +94,9 @@ public class CourseRepositary : ICourseRepositary
     }
 
 
-    public async Task DeleteCourseAsync(Course course)
+    public async Task DeleteCourseAsync(int id)
     {
+        Course course = _context.Course.Find(id);
         _context.Course.Remove(course);
         await _context.SaveChangesAsync();
     }

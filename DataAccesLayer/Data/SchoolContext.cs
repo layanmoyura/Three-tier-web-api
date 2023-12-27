@@ -33,6 +33,9 @@ namespace DataAccessLayer.Data
                 .HasForeignKey(e => e.StudentID)
                 .OnDelete(DeleteBehavior.Restrict);
 
+
+
+
             modelBuilder.Entity<Admin>()
                .HasIndex(a => a.EmailAddress)
                .IsUnique();

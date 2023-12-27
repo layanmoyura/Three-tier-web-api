@@ -5,7 +5,7 @@ namespace PresentationLayer.Models
 {
     public class CourseModel
     {
-        [Required]
+        
         public int CourseID { get; set; }
         [Required]
         public string Title { get; set; }

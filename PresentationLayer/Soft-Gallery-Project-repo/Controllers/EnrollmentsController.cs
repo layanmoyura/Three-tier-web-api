@@ -60,12 +60,12 @@ namespace ContosoUniversity.Controllers
 
         [Route("create")]
         [HttpPost]
-        public async Task<ActionResult> Create([Bind("EnrollmentID,CourseID,StudentID,Grade")] EnrollmentModel enrollmentmodel)
+        public async Task<ActionResult> Create([Bind("CourseID,StudentID,Grade")] EnrollmentModel enrollmentmodel)
         {
            
             var enrollment = MappingFunctions.ToEnrollment(enrollmentmodel);
             await _enrollmentService.AddEnrollment(enrollment);
-            return RedirectToAction(nameof(Index));
+            return StatusCode(200);
            
         }
 
@@ -79,7 +79,7 @@ namespace ContosoUniversity.Controllers
         {
             var updateenrollment = MappingFunctions.ToEnrollment(enrollmentmodel);
             await _enrollmentService.UpdateEnrollment(updateenrollment, id);
-            return RedirectToAction(nameof(Index));
+            return StatusCode(200);
             
         }
 
@@ -91,7 +91,7 @@ namespace ContosoUniversity.Controllers
         {
             var enrollment = await _enrollmentService.GetEnrollmentById(id.Value);
             await _enrollmentService.DeleteEnrollment(enrollment);
-            return RedirectToAction(nameof(Index));
+            return StatusCode(200);
         }
 
        
