@@ -17,7 +17,7 @@ namespace PresentationLayer.Models
         [Required]
         public int StudentID { get; set; }
         [Required]
-        public Grade? Grade { get; set; }
+        public Grade Grade { get; set; }
 
         public StudentModel Student { get; set; }
 
