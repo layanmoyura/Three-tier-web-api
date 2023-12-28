@@ -24,7 +24,7 @@ namespace ContosoUniversity.Controllers
         }
 
         //READ
-        //[Authorize]
+        [Authorize]
         [Route("index")]
         [HttpGet]
         
@@ -43,7 +43,7 @@ namespace ContosoUniversity.Controllers
 
         }
 
-        //[Authorize]
+        [Authorize]
         [Route("details/{id}")]
         [HttpGet]
         public async Task<IActionResult> Details(int? id)
@@ -74,7 +74,7 @@ namespace ContosoUniversity.Controllers
             
         }
 
-        //[Authorize]
+        [Authorize]
         [Route("update/{id}")]
         [HttpPut]
         public async Task<ActionResult> EditPost([Bind("LastName,FirstMidName,JoinedDate")] StudentModel studentmodel, int id)
@@ -86,7 +86,7 @@ namespace ContosoUniversity.Controllers
 
 
         // POST: Students/Delete/5
-        //[Authorize]
+        [Authorize]
         [Route("delete/{id}")]
         [HttpDelete]
         public async Task<IActionResult> DeleteConfirm(int? id)

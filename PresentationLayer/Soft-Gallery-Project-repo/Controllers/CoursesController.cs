@@ -4,6 +4,7 @@ using PresentationLayer.Models;
 using PresentationLayer.helper;
 using BusinessLayer.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ContosoUniversity.Controllers
 {
@@ -19,6 +20,7 @@ namespace ContosoUniversity.Controllers
             _courseServices = courseServices;
         }
 
+        [Authorize]
         [Route("index")]
         [HttpGet]
         // GET: Courses
@@ -30,6 +32,7 @@ namespace ContosoUniversity.Controllers
         }
 
         // GET: Courses/Details/5
+        [Authorize]
         [Route("details/{id}")]
         [HttpGet]
         public async Task<ActionResult> Details(int? id)
@@ -50,7 +53,7 @@ namespace ContosoUniversity.Controllers
             return Ok(coursemodel);
         }
 
-
+        [Authorize]
         [Route("create")]
         [HttpPost]
         public async Task<ActionResult> Create([Bind("Title,Credits")] CourseModel coursemodel)
@@ -63,7 +66,7 @@ namespace ContosoUniversity.Controllers
 
         // GET: Courses/Edit/5
 
-
+        [Authorize]
         [Route("update/{id}")]
         [HttpPut]
         public async Task<ActionResult> EditPost([Bind("Title,Credits")] CourseModel courseModel, int id)
@@ -76,6 +79,7 @@ namespace ContosoUniversity.Controllers
             
         }
 
+        [Authorize]
         [Route("delete/{id}")]
         [HttpDelete]
         public async Task<ActionResult> DeleteConfirm(int? id)

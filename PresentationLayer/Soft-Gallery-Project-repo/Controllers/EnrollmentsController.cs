@@ -8,6 +8,7 @@ using DataAccessLayer.Data;
 using PresentationLayer.Models;
 using PresentationLayer.helper;
 using BusinessLayer.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ContosoUniversity.Controllers
 {
@@ -26,7 +27,7 @@ namespace ContosoUniversity.Controllers
         }
 
         // GET: Enrollments
-
+        [Authorize]
         [Route("index")]
         [HttpGet]
         public async Task <ActionResult> Index()
@@ -37,6 +38,7 @@ namespace ContosoUniversity.Controllers
         }
 
         // GET: Enrollments/Details/5
+        [Authorize]
         [Route("details/{id}")]
         [HttpGet]
         public async Task <ActionResult> Details(int? id)
@@ -57,7 +59,7 @@ namespace ContosoUniversity.Controllers
             return Ok(enrollmentmodel);
         }
 
-
+        [Authorize]
         [Route("create")]
         [HttpPost]
         public async Task<ActionResult> Create([Bind("CourseID,StudentID,Grade")] EnrollmentModel enrollmentmodel)
@@ -72,7 +74,7 @@ namespace ContosoUniversity.Controllers
 
 
         // POST: Enrollments/Edit/5
-
+        [Authorize]
         [Route("update/{id}")]
         [HttpPut]
         public async Task<ActionResult> EditPost([Bind("CourseID,StudentID,Grade")] EnrollmentModel enrollmentmodel, int id)
@@ -85,6 +87,7 @@ namespace ContosoUniversity.Controllers
 
 
         // POST: Enrollments/Delete/5
+        [Authorize]
         [Route("delete/{id}")]
         [HttpDelete]
         public async Task<ActionResult> DeleteConfirmed(int? id)
