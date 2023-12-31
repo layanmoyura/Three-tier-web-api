@@ -33,19 +33,11 @@ namespace BusinessLayer.Services
             await _enrollmentRepository.UpdateEnrollment(enrollment,id);
         }
 
-        public async Task DeleteEnrollment(Enrollment enrollment)
+        public async Task DeleteEnrollment(int id)
         {
-            await _enrollmentRepository.DeleteEnrollment(enrollment);
+            await _enrollmentRepository.DeleteEnrollment(id);
         }
 
-        public async Task<IEnumerable<int>> GetCourseIDsAsync()
-        {
-            return await _enrollmentRepository.GetCourseIDsAsync();
-        }
-
-        public async Task<IEnumerable<int>> GetStudentIDsAsync()
-        {
-            return await _enrollmentRepository.GetStudentIDsAsync();
-        }
+       
     }
 }

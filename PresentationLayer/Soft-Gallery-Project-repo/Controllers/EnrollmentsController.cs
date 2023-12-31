@@ -92,8 +92,7 @@ namespace ContosoUniversity.Controllers
         [HttpDelete]
         public async Task<ActionResult> DeleteConfirmed(int? id)
         {
-            var enrollment = await _enrollmentService.GetEnrollmentById(id.Value);
-            await _enrollmentService.DeleteEnrollment(enrollment);
+            await _enrollmentService.DeleteEnrollment(id.Value);
             return StatusCode(200);
         }
 

@@ -114,21 +114,13 @@ namespace DataAccessLayer.Repositories
 
 
 
-        public async Task DeleteEnrollment(Enrollment enrollment)
+        public async Task DeleteEnrollment(int id)
         {
+            Enrollment enrollment = _context.Enrollment.Find(id);
             _context.Enrollment.Remove(enrollment);
             await _context.SaveChangesAsync();
         }
 
-        public async Task<IEnumerable<int>> GetCourseIDsAsync()
-        {
-            return await _context.Course.Select(course => course.CourseID).ToListAsync();
-        }
-
-        public async Task<IEnumerable<int>> GetStudentIDsAsync()
-        {
-            return await _context.Student.Select(student => student.ID).ToListAsync();
-        }
-
+      
     }
 }

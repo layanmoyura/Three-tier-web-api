@@ -28,13 +28,11 @@ namespace ContosoUniversity.Controllers
         [Route("index")]
         [HttpGet]
         
-        public async Task<ActionResult> Index(string sortOrder, string searchString)
+        public async Task<ActionResult> Index()
         {
-            ViewData["NameSortParm"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
-            ViewData["DateSortParm"] = sortOrder == "Date" ? "date_desc" : "Date";
-            ViewData["CurrentFilter"] = searchString;
+            
 
-            var students = await studentServices.GetStudentsAsync(sortOrder, searchString);
+            var students = await studentServices.GetStudentsAsync();
 
             var studentmodels = MappingFunctions.ToStudentModelList(students);
 

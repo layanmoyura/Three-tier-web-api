@@ -4,7 +4,7 @@ namespace BusinessLayer.Interfaces
 {
     public interface IStudentServices
     {
-        Task<IEnumerable<Student>> GetStudentsAsync(string sortOrder, string searchString);
+        Task<IEnumerable<Student>> GetStudentsAsync();
         Task<Student> GetStudentDetailsAsync(int id);
         Task CreateStudentAsync(Student student);
         Task<Student> GetStudentById(int id);

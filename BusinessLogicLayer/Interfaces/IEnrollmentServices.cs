@@ -9,9 +9,8 @@ namespace BusinessLayer.Interfaces
         Task<Enrollment> GetEnrollmentById(int id);
         Task AddEnrollment(Enrollment enrollment);
         Task UpdateEnrollment(Enrollment enrollment, int id);
-        Task DeleteEnrollment(Enrollment enrollment);
-        Task<IEnumerable<int>> GetCourseIDsAsync();
-        Task<IEnumerable<int>> GetStudentIDsAsync();
+        Task DeleteEnrollment(int id);
+       
         
     }
 }

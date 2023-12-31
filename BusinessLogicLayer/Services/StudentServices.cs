@@ -14,31 +14,10 @@ namespace BusinessLayer.Services
             _studentRepository = studentRepository;
         }
 
-        public async Task<IEnumerable<Student>> GetStudentsAsync(string sortOrder, string searchString)
+        public async Task<IEnumerable<Student>> GetStudentsAsync()
         {
             var students = await _studentRepository.GetStudentsAsync();
 
-            if (!String.IsNullOrEmpty(searchString))
-            {
-                students = students.Where(s => s.LastName.Contains(searchString)
-                                       || s.FirstMidName.Contains(searchString)).ToList();
-            }
-
-            switch (sortOrder)
-            {
-                case "name_desc":
-                    students = students.OrderByDescending(s => s.LastName).ToList();
-                    break;
-                case "Date":
-                    students = students.OrderBy(s => s.JoinedDate).ToList();
-                    break;
-                case "date_desc":
-                    students = students.OrderByDescending(s => s.JoinedDate).ToList();
-                    break;
-                default:
-                    students = students.OrderBy(s => s.LastName).ToList();
-                    break;
-            }
 
             return students;
         }
