@@ -35,7 +35,7 @@ namespace Soft_Gallery_Project
 
             services.AddDatabaseDeveloperPageExceptionFilter();
 
-            services.AddControllers(); // Changed from AddControllersWithViews()
+            services.AddControllers();// Changed from AddControllersWithViews()
 
             services.AddScoped<IStudentRepository, StudentRepository>();
             services.AddScoped<ICourseRepositary, CourseRepositary>();

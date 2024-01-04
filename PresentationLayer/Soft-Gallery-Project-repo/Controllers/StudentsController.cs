@@ -60,7 +60,7 @@ namespace ContosoUniversity.Controllers
 
 
 
-        [Authorize]
+        //[Authorize]
         [Route("create")]
         [HttpPost]
         public async Task<ActionResult> Create([Bind("LastName,FirstMidName,JoinedDate")] StudentModel studentmodel)

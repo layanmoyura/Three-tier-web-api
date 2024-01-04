@@ -70,7 +70,7 @@ namespace TestProject1
         [TestMethod]
         public async Task CreateStudentAsync_ReturnsOk()
         {
-            var student = _fixture.Create<Student>();
+            
             _studentServicesMock.Setup(service => service.CreateStudentAsync(It.IsAny<Student>())).Returns(Task.CompletedTask);
 
             _controller = new StudentsController(_studentServicesMock.Object);
@@ -84,7 +84,7 @@ namespace TestProject1
         [TestMethod]
         public async Task UpdateStudentAsync_ReturnsOk()
         {
-            var student = _fixture.Create<Student>();
+            
             _studentServicesMock.Setup(service => service.UpdateStudentAsync(It.IsAny<Student>(), It.IsAny<int>())).Returns(Task.CompletedTask);
 
             _controller = new StudentsController(_studentServicesMock.Object);
